@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Navbar from "./Navbar";
 
 export const metadata: Metadata = {
-  title: "My App",
+  title: "THERA ASSISSTANT",
   description: "Health Profile & Chatbot",
 };
 
