@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function SignupPage() {
   const router = useRouter();
@@ -28,36 +29,62 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-20">
-      <h1 className="text-2xl font-bold mb-4">Sign Up</h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <input
-          className="w-full border p-2 rounded"
-          placeholder="Name"
-          name="name"
-          onChange={handleChange}
-          required
-        />
-        <input
-          className="w-full border p-2 rounded"
-          placeholder="Email"
-          name="email"
-          type="email"
-          onChange={handleChange}
-          required
-        />
-        <input
-          className="w-full border p-2 rounded"
-          placeholder="Password"
-          name="password"
-          type="password"
-          onChange={handleChange}
-          required
-        />
-        <button className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700" type="submit">
-          Sign Up
-        </button>
-      </form>
+    <div className="min-h-screen bg-gradient-to-br from-purple-100 to-blue-200 flex items-center justify-center px-4">
+      <div className="bg-white shadow-xl rounded-xl p-8 w-full max-w-md">
+        <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
+          Create Your Account
+        </h1>
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            placeholder="Name"
+            name="name"
+            onChange={handleChange}
+            required
+          />
+          <input
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            placeholder="Email"
+            name="email"
+            type="email"
+            onChange={handleChange}
+            required
+          />
+          <input
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            placeholder="Password"
+            name="password"
+            type="password"
+            onChange={handleChange}
+            required
+          />
+          <button
+            className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+            type="submit"
+          >
+            Sign Up
+          </button>
+        </form>
+
+        <div className="mt-6 text-center text-sm text-gray-600">
+          <p>
+            Already have an account?{" "}
+            <Link href="/login" className="text-blue-600 hover:underline">
+              Login here
+            </Link>
+          </p>
+          <p className="mt-2">
+            <Link href="/" className="text-gray-500 hover:underline">
+              ← Back to Home
+            </Link>{" "}
+            |{" "}
+            <Link href="/profile" className="text-gray-500 hover:underline">
+              Go to Profile
+            </Link>
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
