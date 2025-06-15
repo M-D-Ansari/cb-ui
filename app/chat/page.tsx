@@ -17,22 +17,22 @@ export default function ChatPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-100 to-blue-200 relative">
       {/* Logout Button */}
-      <div className="absolute top-4 right-4">
+      {/* <div className="absolute top-4 right-4">
         <button
           onClick={handleLogout}
           className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 shadow-md transition"
         >
           Logout
         </button>
-      </div>
-      <div className="absolute top-4 right-40">
+      </div> */}
+      {/* <div className="absolute top-4 right-40">
         <button
           onClick={handleProfile}
           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-red-600 shadow-md transition"
         >
           Profile
         </button>
-      </div>
+      </div> */}
 
       {/* Chatbot iFrame */}
       <div className="w-full h-screen p-4 pt-16">
