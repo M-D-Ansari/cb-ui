@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 
 export const metadata: Metadata = {
   title: "THERA ASSISSTANT",
