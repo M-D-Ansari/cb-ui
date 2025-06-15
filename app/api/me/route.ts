@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { jwtVerify } from 'jose';
+import connectDB from "@/lib/mongodb";
 
 const JWT_SECRET = process.env.JWT_SECRET || 'secret123';
 const secret = new TextEncoder().encode(JWT_SECRET);
