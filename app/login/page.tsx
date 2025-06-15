@@ -11,7 +11,7 @@ export default function LoginPage() {
     fetch("/api/me", { credentials: "include" }).then((res) => {
       if (res.ok) router.push("/chat");
     });
-  }, []);
+  }, [router]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
