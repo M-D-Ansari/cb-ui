@@ -31,15 +31,16 @@ export default function SignupPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-100 to-blue-200 flex items-center justify-center px-4">
       <div className="bg-white shadow-xl rounded-xl p-8 w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
+        <h1 className="text-3xl font-bold text-center mb-6 text-black">
           Create Your Account
         </h1>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 text-black">
           <input
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="Name"
             name="name"
+            value={form.name}
             onChange={handleChange}
             required
           />
@@ -48,6 +49,7 @@ export default function SignupPage() {
             placeholder="Email"
             name="email"
             type="email"
+            value={form.email}
             onChange={handleChange}
             required
           />
@@ -56,6 +58,7 @@ export default function SignupPage() {
             placeholder="Password"
             name="password"
             type="password"
+            value={form.password}
             onChange={handleChange}
             required
           />
@@ -67,7 +70,7 @@ export default function SignupPage() {
           </button>
         </form>
 
-        <div className="mt-6 text-center text-sm text-gray-600">
+        <div className="mt-6 text-center text-sm text-black">
           <p>
             Already have an account?{" "}
             <Link href="/login" className="text-blue-600 hover:underline">
@@ -75,11 +78,11 @@ export default function SignupPage() {
             </Link>
           </p>
           <p className="mt-2">
-            <Link href="/" className="text-gray-500 hover:underline">
+            <Link href="/" className="text-gray-600 hover:underline">
               ← Back to Home
             </Link>{" "}
             |{" "}
-            <Link href="/profile" className="text-gray-500 hover:underline">
+            <Link href="/profile" className="text-gray-600 hover:underline">
               Go to Profile
             </Link>
           </p>

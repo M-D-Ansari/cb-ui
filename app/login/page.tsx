@@ -40,11 +40,11 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-200 flex items-center justify-center px-4">
       <div className="bg-white shadow-xl rounded-xl p-8 w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
+        <h1 className="text-3xl font-bold text-center mb-6 text-black">
           Login to your Account
         </h1>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 text-black">
           <input
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="Email"
@@ -69,7 +69,7 @@ export default function LoginPage() {
           </button>
         </form>
 
-        <div className="mt-6 text-center text-sm text-gray-600">
+        <div className="mt-6 text-center text-sm text-black">
           <p>
             Don&apos;t have an account?{" "}
             <Link href="/signup" className="text-blue-600 hover:underline">
@@ -77,7 +77,7 @@ export default function LoginPage() {
             </Link>
           </p>
           <p className="mt-2">
-            <Link href="/" className="text-gray-500 hover:underline">
+            <Link href="/" className="text-gray-600 hover:underline">
               ← Back to Home
             </Link>
           </p>

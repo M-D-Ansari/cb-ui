@@ -26,7 +26,7 @@ export default function Home() {
           <li>1) Mohammad Danish Ansari</li>
           <li>2) Vasiullah Mullan</li>
           <li>3) Ayyan Shaikh</li>
-          <li>4) Gaurav ______</li>
+          <li>4) Gaurav Mishra</li>
           <li className="mt-3">Students of Theem COE</li>
         </ul>
 
