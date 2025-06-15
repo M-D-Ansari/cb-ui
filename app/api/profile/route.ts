@@ -4,15 +4,26 @@ import mongoose from "mongoose";
 
 const JWT_SECRET = process.env.JWT_SECRET || "secret123";
 const { jwtVerify } = await import("jose");
-
 const secret = new TextEncoder().encode(JWT_SECRET);
+
+type ProfileInput = {
+  Sleep: string;
+  Relationship_Status: string;
+  Family_Background: string;
+  Physical_Exercise: string;
+  Diet_Quality: "Unhealthy" | "Average" | "Healthy";
+  Smoking_Habit: "Heavy Smoker" | "Regular Smoker" | "Occasional Smoker" | "Non-Smoker";
+  Alcohol_Consumption: "Heavy Drinker" | "Regular Drinker" | "Social Drinker" | "Non-Drinker";
+  Medication_Usage: "Yes" | "No";
+  Stress_Level: "Low" | "Medium" | "High";
+};
 
 async function getUserFromToken(req: NextRequest) {
   const token = req.cookies.get("token")?.value;
   if (!token) return null;
   try {
     const { payload } = await jwtVerify(token, secret);
-    return payload?.email;
+    return payload?.email as string;
   } catch {
     return null;
   }
@@ -23,7 +34,7 @@ export async function POST(req: NextRequest) {
   const email = await getUserFromToken(req);
   if (!email) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
-  const data = await req.json();
+  const data = (await req.json()) as ProfileInput;
 
   const mappedData = {
     ...data,
