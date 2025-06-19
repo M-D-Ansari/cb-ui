@@ -7,6 +7,9 @@ const { jwtVerify } = await import("jose");
 const secret = new TextEncoder().encode(JWT_SECRET);
 
 type ProfileInput = {
+  name: string;
+  age: string;
+  gender: string;
   Sleep: string;
   Relationship_Status: string;
   Family_Background: string;
@@ -37,7 +40,13 @@ export async function POST(req: NextRequest) {
   const data = (await req.json()) as ProfileInput;
 
   const mappedData = {
-    ...data,
+    name: data.name,
+    age: data.age,
+    gender: data.gender,
+    Sleep: data.Sleep,
+    Relationship_Status: data.Relationship_Status,
+    Family_Background: data.Family_Background,
+    Physical_Exercise: data.Physical_Exercise,
     Diet_Quality: { Unhealthy: 1, Average: 2, Healthy: 3 }[data.Diet_Quality],
     Smoking_Habit: {
       "Heavy Smoker": 1,
