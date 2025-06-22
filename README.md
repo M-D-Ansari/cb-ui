@@ -35,6 +35,11 @@ cb-ui-main/
 
 ---
 
+## 🌐 Live Preview
+
+Check out the live version of the app here:  
+🔗 [https://cb-ui-iota.vercel.app](https://cb-ui-iota.vercel.app)
+
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
