@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# CB UI - Chat Based User Interface (Frontend)
 
-First, run the development server:
+This is the frontend of a chat-based application built using **Next.js**, **TypeScript**, and **Tailwind CSS**. It provides a modern UI for user authentication and chatting, integrated with API endpoints for login, signup, profile, and session management.
+
+---
+
+## 🧰 Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **API Routes**: Built-in via Next.js API
+- **Auth Handling**: Session-based via middleware
+- **Package Manager**: npm
+
+---
+
+## 📁 Project Structure
+
+```
+cb-ui-main/
+├── app/
+│   ├── api/                # Auth API (login, signup, profile)
+│   ├── chat/               # Chat interface
+│   ├── Navbar.tsx          # Top navigation bar
+│   ├── layout.tsx          # App layout template
+│   └── globals.css         # Global styles
+├── middleware.ts           # Route middleware for auth
+├── next.config.ts          # Next.js configuration
+├── package.json            # Project dependencies
+├── tsconfig.json           # TypeScript config
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/cb-ui-main.git
+cd cb-ui-main
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔐 Authentication Endpoints
 
-## Learn More
+| Endpoint        | Description         |
+|----------------|---------------------|
+| `/api/signup`  | User registration   |
+| `/api/login`   | User login          |
+| `/api/logout`  | Logout current user |
+| `/api/me`      | Get current profile |
+| `/api/profile` | Profile data        |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Build for Production
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+npm start
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🙌 Acknowledgments
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
